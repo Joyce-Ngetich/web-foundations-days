@@ -1,0 +1,172 @@
+/* 1. Global Box-Sizing Reset & Base Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f6f8;
+  color: #333333;
+  line-height: 1.6;
+}
+
+/* 2. Header Styles & Flexbox Navigation */
+header {
+  background-color: #2c3e50;
+  color: #ffffff;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2.2rem;
+}
+
+header p {
+  margin: 0 0 1.5rem 0;
+  color: #ecf0f1;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #34495e;
+  color: #3498db;
+}
+
+/* 3. Centered Main Layout & Section Cards */
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+section {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* 4. Responsive CSS Grid Features Cards */
+ul.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+ul.features li {
+  background-color: #eef2f5;
+  padding: 1rem;
+  border-radius: 6px;
+  border-left: 4px solid #3498db;
+}
+
+/* 5. Shortcuts Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th,
+td {
+  border: 1px solid #dddddd;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+/* 6. Feedback Form Fields */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* 7. Button Styles with Transitions */
+button {
+  background-color: #27ae60;
+  color: #ffffff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  align-self: flex-start;
+}
+
+button:hover {
+  background-color: #219150;
+  transform: translateY(-2px);
+}
+
+/* 8. Footer Styles */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #2c3e50;
+  color: #ffffff;
+  margin-top: 2rem;
+}
+
+/* 9. Media Query for Small Screens (max-width: 600px) */
+@media (max-width: 600px) {
+  header {
+    padding: 1rem 0.5rem;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  main {
+    margin: 1rem auto;
+    padding: 0 0.5rem;
+  }
+
+  button {
+    width: 100%;
+  }
+}
